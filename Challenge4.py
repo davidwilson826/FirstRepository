@@ -12,13 +12,11 @@ def points(rectangle):
     rectpoints[2][1] += rectangle[3]
     rectpoints[3][0] += rectangle[2]
     rectpoints[3][1] += rectangle[3]
+    return rectpoints
     
-points(rectangle1)
-rect1points = rectpoints
-points(rectangle2)
-rect2points = rectpoints
+rect1points = map(points, rectangle1)
 
-print(rect1points, rect2points)
+print(rect1points)#, rect2points)
 
 result = "No collision"
 
