@@ -14,5 +14,6 @@ while len(string) > 0 and success == True:
     index = 0
     if len(string) == length:
         success = False
+    length = len(string)
     
 print(success)
