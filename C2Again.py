@@ -7,7 +7,7 @@ while len(string) > 0 and success == True:
     for x in ['()','[]','{}']:
         if x in string:
             loc = string.index(x)
-            string = string[:loc].append(string[loc+2])
+            string = string[:loc]+string[loc+2:]
     if length == len(string):
         success = False
         
