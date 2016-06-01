@@ -11,6 +11,7 @@ while success == False:
     
     if ''.join(number) == guess:
         print('Correct!')
+        print(''.join(number))
         success = True
         
     else:
