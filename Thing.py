@@ -1,15 +1,15 @@
 from random import randint
 
 success = False
+number = [str(randint(0,9)) for x in range(5)]#'55890'
+#print(number)
 
 while success == False:
-    number = [str(randint(0,9)) for x in range(5)]#'55890'
-    print(number)
     
     guess = input("Guess a five digit number. ")#'58995'
-    print(guess)
+    #print(guess)
     
-    if number == guess:
+    if ''.join(number) == guess:
         print('Correct!')
         success = True
         
