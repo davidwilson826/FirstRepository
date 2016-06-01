@@ -1,17 +1,21 @@
 from random import randint
 
-number = [str(randint(0,9)) for x in range(5)]
+number = '55890'#[str(randint(0,9)) for x in range(5)]
 print(number)
 
-guess = input("Guess a five digit number. ")
+guess = '12355'#input("Guess a five digit number. ")
 print(guess)
 
-correct = 0
+nfreq = [number.count(str(x)) for x in range(10)]
+gfreq = [guess.count(str(x)) for x in range(10)]
 
-for x in guess:
-    if guess.count(x) < number.count(x):
-        correct += guess.count(x)
+correct = 0
+index = 0
+
+while index <= 10:
+    if nfreq[index] < gfreq[index]:
+        correct += nfreq[index]
     else:
-        correct += number.count(x)
+        correct += gfreq[index]
         
 print(correct)
