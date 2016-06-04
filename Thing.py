@@ -17,7 +17,7 @@ def compare():
     #print(guess)
     global attempts
     attempts += 1
-    print(attempts)
+    #print(attempts)
     if ''.join(number) == guess:
         print('====================\nCorrect! '+str(attempts)+' attempts.')
         print(''.join(number))
