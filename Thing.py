@@ -1,10 +1,11 @@
 from random import randint
 
 #success = False
-number = [str(randint(0,9)) for x in range(5)]#'55890'
+#number = [str(randint(0,9)) for x in range(5)]
+number = '55890'
 #print(number)
 
-global attempts
+#global attempts
 attempts = 0
 
 #while success == False:
@@ -13,9 +14,9 @@ def compare():
     
     guess = input("Guess a five digit number. ")#'58995'
     #print(guess)
-    
+    global attempts
     attempts += 1
-    
+    #print(attempts)
     if ''.join(number) == guess:
         print('===================='
             'Correct! '+str(attempts)+' attempts.'
