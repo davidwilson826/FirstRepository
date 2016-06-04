@@ -1,31 +1,21 @@
 from random import randint
 
-#eline = '====================\n'
-
-#success = False
-#number = [str(randint(0,9)) for x in range(5)]
 number = '55890'
-#print(number)
 
-#global attempts
 attempts = 0
 guesses = []
-
-#while success == False:
 
 def compare():
     
     guess = input("Guess a five digit number. ")#'58995'
-    #print(guess)
+    
     global attempts
     attempts += 1
-    #print(attempts)
+    
     if ''.join(number) == guess:
         print('====================\nCorrect! '+str(attempts)+' attempts.')
         print(''.join(number))
         print('====================')
-#        print(''.join(number))
-#        success = True
         
     else:
     
@@ -58,18 +48,15 @@ def compare():
         
         guesses[-1].append(correct)
         
-        #print(guesses)
         print('\n'*50)
         header = ['Attempt', 'Guess', 'Correct Digits', 'Correctly Placed']
-        eline = '='*57
-        #print(eline+
-        #          '||Attempt||Guess||Correct Digits||Correctly Placed||')
+        eline = '='*52
+
         print(eline)
         for x in header:
             print('||'+x,end='')
         print('||')
-        #for x in zip(guesses, [header for x in guesses]):
-        #print([list(zip(y, header)) for y in guesses])
+
         for x in [list(zip(y, header)) for y in guesses]:
             for a in x:
                 z = (str(a[0]), a[1])
@@ -79,8 +66,6 @@ def compare():
                     print(' ',end='')
             print('||')
         print(eline+'\n')
-                    #eline+
-                #  '||   '+str(x[0])+'   ||'+str(x[1])+'||'+str(x[2])+'||'+str(x[3])+'||')
         
         compare()
         
