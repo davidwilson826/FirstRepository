@@ -9,17 +9,21 @@ guesses = []
 def compare():
     
     def makeGuess():
+        global guess
         guess = input("Guess a five digit number. ")#'58995'
         for x in guess:
+            #print(x)
             if x not in '0123456789':
                 print('Not a five digit number. Try again.')
                 makeGuess()
+                return
                 
     makeGuess()
     
     global attempts
     attempts += 1
         
+    #global guess    
     nfreq = [number.count(str(x)) for x in range(10)]
     gfreq = [guess.count(str(x)) for x in range(10)]
         
@@ -34,8 +38,6 @@ def compare():
         index += 1
             
     guesses.append([attempts, guess, correct])
-                
-    print(str(correct)+' digits correct')
         
     correct = 0
     index = 0
@@ -44,8 +46,6 @@ def compare():
         if number[index] == guess[index]:
             correct += 1
         index += 1
-        
-    print(str(correct)+' digits correctly placed')
         
     guesses[-1].append(correct)
         
