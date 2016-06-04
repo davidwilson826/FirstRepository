@@ -7,6 +7,7 @@ number = '55890'
 
 #global attempts
 attempts = 0
+guesses = []
 
 #while success == False:
 
@@ -16,12 +17,11 @@ def compare():
     #print(guess)
     global attempts
     attempts += 1
-    #print(attempts)
+    print(attempts)
     if ''.join(number) == guess:
-        print('===================='
-            'Correct! '+str(attempts)+' attempts.'
-            ''.join(number)
-            '====================')
+        print('====================\nCorrect! '+str(attempts)+' attempts.')
+        print(''.join(number))
+        print('====================')
 #        print(''.join(number))
 #        success = True
         
@@ -39,6 +39,8 @@ def compare():
             else:
                 correct += gfreq[index]
             index += 1
+            
+        guesses.append([guess, correct])
                 
         print(str(correct)+' digits correct')
         
@@ -51,6 +53,10 @@ def compare():
             index += 1
             
         print(str(correct)+' digits correctly placed')
+        
+        guesses[-1].append(correct)
+        
+        print(guesses)
         
         compare()
         
