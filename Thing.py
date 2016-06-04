@@ -1,18 +1,28 @@
 from random import randint
 
-success = False
+#success = False
 number = [str(randint(0,9)) for x in range(5)]#'55890'
 #print(number)
 
-while success == False:
+global attempts
+attempts = 0
+
+#while success == False:
+
+def compare():
     
     guess = input("Guess a five digit number. ")#'58995'
     #print(guess)
     
+    attempts += 1
+    
     if ''.join(number) == guess:
-        print('Correct!')
-        print(''.join(number))
-        success = True
+        print('===================='
+            'Correct! '+str(attempts)+' attempts.'
+            ''.join(number)
+            '====================')
+#        print(''.join(number))
+#        success = True
         
     else:
     
@@ -40,3 +50,7 @@ while success == False:
             index += 1
             
         print(str(correct)+' digits correctly placed')
+        
+        compare()
+        
+compare()
