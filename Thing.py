@@ -2,6 +2,9 @@ from random import randint
 
 eline = '====================\n'
 
+print(eline+
+      '||Attempt||Guess||Correct Digits||Correctly Placed||')
+
 #success = False
 #number = [str(randint(0,9)) for x in range(5)]
 number = '55890'
@@ -9,7 +12,7 @@ number = '55890'
 
 #global attempts
 attempts = 0
-guesses = []
+#guesses = []
 
 #while success == False:
 
@@ -42,30 +45,31 @@ def compare():
                 correct += gfreq[index]
             index += 1
             
-        guesses.append([guess, correct])
+        #guesses.append([guess, correct])
                 
-        print(str(correct)+' digits correct')
+        #print(str(correct)+' digits correct')
         
-        correct = 0
+        cplc = 0
         index = 0
         
         while index <= 4:
             if number[index] == guess[index]:
-                correct += 1
+                cplc += 1
             index += 1
             
-        print(str(correct)+' digits correctly placed')
+        #print(str(cplc)+' digits correctly placed')
         
-        guesses[-1].append(correct)
+        print('||'+str(attempts)+'||'+guess+'||'+str(correct)+'||'+str(cplc)+'||')
+        
+        #guesses[-1].append(correct)
         
         #print(guesses)
-        print('\n'*50)
-        for x in guesses:
-            print(eline+
-                  '||Attempt||Guess||Correct Digits||Correctly Placed||\n'+
-                  eline+
-                  '||'+str(guesses.index(x+1))+'||'+str(x[0])+'||'+str(x[1])+'||'+str(x[2])+'||\n'+
-                  eline)
+        #print('\n'*50)
+        #for x in guesses:
+        #    
+        #          eline+
+        #          '||'+str(guesses.index(x)+1)+'||'+str(x[0])+'||'+str(x[1])+'||'+str(x[2])+'||\n'+
+        #          eline)
         
         compare()
         
