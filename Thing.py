@@ -1,5 +1,7 @@
 from random import randint
 
+eline = '====================\n'
+
 #success = False
 #number = [str(randint(0,9)) for x in range(5)]
 number = '55890'
@@ -56,7 +58,13 @@ def compare():
         
         guesses[-1].append(correct)
         
-        print(guesses)
+        #print(guesses)
+        print('\n'*50)
+        print(eline
+              '||Attempt||Guess||Correct Digits||Correctly Placed||\n'
+              eline
+              '||'str(x)'||'str(guesses[x][0])'||'str(guesses[x][1])'||'str(guesses[x][2]'||'
+              eline
         
         compare()
         
