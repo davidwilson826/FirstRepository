@@ -60,11 +60,12 @@ def compare():
         
         #print(guesses)
         print('\n'*50)
-        print(eline
-              '||Attempt||Guess||Correct Digits||Correctly Placed||\n'
-              eline
-              '||'str(x)'||'str(guesses[x][0])'||'str(guesses[x][1])'||'str(guesses[x][2]'||'
-              eline
+        for x in guesses:
+            print(eline+
+                  '||Attempt||Guess||Correct Digits||Correctly Placed||\n'+
+                  eline+
+                  '||'+str(guesses.index(x+1))+'||'+str(x[0])+'||'+str(x[1])+'||'+str(x[2])+'||\n'+
+                  eline)
         
         compare()
         
