@@ -22,8 +22,7 @@ def compare():
     
     global attempts
     attempts += 1
-        
-    #global guess    
+    
     nfreq = [number.count(str(x)) for x in range(10)]
     gfreq = [guess.count(str(x)) for x in range(10)]
         
