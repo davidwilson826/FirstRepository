@@ -1,6 +1,6 @@
 from random import randint
 
-eline = '====================\n'
+#eline = '====================\n'
 
 #success = False
 #number = [str(randint(0,9)) for x in range(5)]
@@ -61,6 +61,7 @@ def compare():
         #print(guesses)
         print('\n'*50)
         header = ['Attempt', 'Guess', 'Correct Digits', 'Correctly Placed']
+        eline = '='*57
         #print(eline+
         #          '||Attempt||Guess||Correct Digits||Correctly Placed||')
         print(eline)
@@ -68,12 +69,16 @@ def compare():
             print('||'+x,end='')
         print('||')
         #for x in zip(guesses, [header for x in guesses]):
-        for x in [zip(str(y), header) for y in guesses]:
-            spaces = ' '*int((len(x[1])-len(x[0]))/2)
-            print('||'+spaces+x[0]+spaces,end='')
-            if (len(x[1])-len(x[0]))%2 == 1:
-                print(' ',end='')
+        #print([list(zip(y, header)) for y in guesses])
+        for x in [list(zip(y, header)) for y in guesses]:
+            for a in x:
+                z = (str(a[0]), a[1])
+                spaces = ' '*int((len(z[1])-len(z[0]))/2)
+                print('||'+spaces+z[0]+spaces,end='')
+                if (len(z[1])-len(z[0]))%2 == 1:
+                    print(' ',end='')
             print('||')
+        print(eline+'\n')
                     #eline+
                 #  '||   '+str(x[0])+'   ||'+str(x[1])+'||'+str(x[2])+'||'+str(x[3])+'||')
         
