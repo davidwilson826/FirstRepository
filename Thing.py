@@ -65,16 +65,15 @@ def compare():
         #          '||Attempt||Guess||Correct Digits||Correctly Placed||')
         print(eline)
         for x in header:
-            print('||'+x)
-        print('\n')
-        for x in zip(guesses, header)
-            for y in [str(z) for z in x[0]]:
-                spaces = ' '*int((len(x[1])-len(y))/2)
-                print('||'+spaces+y+spaces,end='')
-                if (len(x[1])-len(y))%2 == 1:
-                    print(' ',end='')
-                print('||',end='')
-            print('\n')
+            print('||'+x,end='')
+        print('||')
+        #for x in zip(guesses, [header for x in guesses]):
+        for x in [zip(str(y), header) for y in guesses]:
+            spaces = ' '*int((len(x[1])-len(x[0]))/2)
+            print('||'+spaces+x[0]+spaces,end='')
+            if (len(x[1])-len(x[0]))%2 == 1:
+                print(' ',end='')
+            print('||')
                     #eline+
                 #  '||   '+str(x[0])+'   ||'+str(x[1])+'||'+str(x[2])+'||'+str(x[3])+'||')
         
