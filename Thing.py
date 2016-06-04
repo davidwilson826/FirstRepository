@@ -1,6 +1,7 @@
 from random import randint
 
-number = '55890'
+number = [str(randint(0,9)) for x in range(5)]
+#number = '55890'
 
 attempts = 0
 guesses = []
@@ -13,7 +14,7 @@ def compare():
     attempts += 1
     
     if ''.join(number) == guess:
-        print('====================\nCorrect! '+str(attempts)+' attempts.')
+        print('\n====================\nCorrect! '+str(attempts)+' attempts.')
         print(''.join(number))
         print('====================')
         
