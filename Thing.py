@@ -3,6 +3,7 @@
 
 9 attempts
 8 attempts
+7 attempts
 '''
 
 from random import randint
