@@ -1,3 +1,10 @@
+'''
+3 attempts (really lucky)
+
+9 attempts
+8 attempts
+'''
+
 from random import randint
 
 number = [str(randint(0,9)) for x in range(5)]
@@ -13,7 +20,7 @@ def compare():
         guess = input("Guess a five digit number. ")#'58995'
         for x in guess:
             #print(x)
-            if x not in '0123456789':
+            if x not in '0123456789' or len(guess) != 5:
                 print('Not a five digit number. Try again.')
                 makeGuess()
                 return
