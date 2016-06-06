@@ -7,6 +7,9 @@
 '''
 
 from random import randint
+from time import time
+
+start = time()
 
 number = [str(randint(0,9)) for x in range(5)]
 #number = '55890'
@@ -76,7 +79,9 @@ def compare():
     print(eline+'\n')
     
     if ''.join(number) == guess:
-        print('====================\nCorrect! '+str(attempts)+' attempts.')
+        print('====================\nCorrect! \n'+str(attempts)+' attempts.')
+        time = time()-start
+        print('Time: '+str(time//60)+':'+str(round(time%60, 2)))
         print(''.join(number))
         print('====================')
     else:
