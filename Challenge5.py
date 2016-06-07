@@ -11,7 +11,7 @@ for x in range(2,int(n/2)+1):
         
 print(factors)
 
-possibilities = [factors for x in factorial(len(factors))]
+possibilities = [factors for x in range(sum(range(len(factors))))]
 print(possibilities)
 
 '''
@@ -22,3 +22,4 @@ for x in possibilities:
         unique.append(x)
         
 print(len(unique)+1)
+'''
