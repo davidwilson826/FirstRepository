@@ -1,3 +1,5 @@
+from math import factorial
+
 #n = int(input("Enter number? "))
 n = 24
 
@@ -9,6 +11,9 @@ for x in range(2,int(n/2)+1):
         
 print(factors)
 
+possibilities = [factors for x in factorial(len(factors))]
+print(possibilities)
+
 '''
 unique = []
 
@@ -16,4 +21,4 @@ for x in possibilities:
     if x not in unique:
         unique.append(x)
         
-print(len(unique))
+print(len(unique)+1)
